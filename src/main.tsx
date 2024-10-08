@@ -11,8 +11,18 @@
 
 
 
+// Notion  N50
+// const fn50 = function (arr: (number | boolean)[]): number[] {
+//   return arr.filter(item => typeof item === 'number' && arr.indexOf(item) === arr.lastIndexOf(item));
+// };
 
-// // 35 masala 
+// // Test
+// const res = fn50([4, 1, 2, 1, 2, 9, true]);
+// console.log(res, 'fn 50');
+
+
+
+// Notion N35
 
 // interface NumObj {
 //   [key: string]: number;
@@ -44,6 +54,24 @@
 // const str = "Salom 2024-yilda, 3 ta  7 loyihada ishlayman";
 // const res = fn36(str);
 // console.log(res, 'fn 36');
+
+
+// 42 masala
+// interface StringLengthMap {
+//   [key: string]: number;
+// }
+
+// const fn42 = (words: string[]): StringLengthMap => {
+//   const lengthMap: StringLengthMap = {};
+//   words.forEach(word => {
+//     lengthMap[word] = word.length;
+//   });
+//   return lengthMap;
+// };
+
+// const wordArray = ["text", "world", "laptop"];
+// const lengthResult = fn42(wordArray);
+// console.log(lengthResult, 'fn42');
 
 
 // 37 masala
@@ -129,24 +157,6 @@
 // checkReadStatus(books);
 
 
-// 42 masala
-// interface StringLengthMap {
-//   [key: string]: number;
-// }
-
-// const fn42 = (words: string[]): StringLengthMap => {
-//   const lengthMap: StringLengthMap = {};
-//   words.forEach(word => {
-//     lengthMap[word] = word.length;
-//   });
-//   return lengthMap;
-// };
-
-// const wordArray = ["text", "world", "laptop"];
-// const lengthResult = fn42(wordArray);
-// console.log(lengthResult, 'fn42');
-
-
 
 // 44 masala
 
@@ -206,58 +216,44 @@
 
 
 
-// 48 masala
+// // Notion N48
 
-const extractInitials = (fullName: string): string => {
-  return fullName
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase())
-    .join('');
-};
+// const fn48 = (name: string): string => {
+//   return name.split(' ').map(item => item.charAt(0).toUpperCase()).join('');
+// };
 
-const nameString = 'George Raymond Richard Martin';
-const initialsResult = extractInitials(nameString);
-console.log(initialsResult);
+// const str = 'George Raymond Richard Martin';
+// console.log(fn48(str));
 
 
-// 49 masala
+// // Notion N49
 
-interface Individual {
-  name: string;
-  age: number;
-}
+// interface IUser {
+//   name: string;
+//   age: number;
+// }
 
-const findAgeDifference = (individuals: Individual[]): number => {
-  if (individuals.length === 0) return 0;
+// const fn49 = (array: IUser[]): number => {
+//   if (array.length === 0) return 0;
 
-  const sortedIndividuals = individuals.sort((a, b) => a.age - b.age);
-  const youngestAge = sortedIndividuals[0].age; // Eng yosh
-  const oldestAge = sortedIndividuals[sortedIndividuals.length - 1].age;
+//   const sortUser = array.sort((a, b) => a.age - b.age);
+//   const yong = sortUser[0].age;
+//   const old = sortUser[sortUser.length - 1].age;
 
-  return oldestAge - youngestAge;
-};
+//   return old - yong;
+// };
 
-const peopleArray: Individual[] = [
-  { name: 'John', age: 13 },
-  { name: 'Mark', age: 56 },
-  { name: 'Rachel', age: 45 },
-  { name: 'Nate', age: 67 },
-  { name: 'Jeniffer', age: 65 }
-];
+// const peopleArray: IUser[] = [
+//   { name: 'John', age: 13 },
+//   { name: 'Mark', age: 56 },
+//   { name: 'Rachel', age: 45 },
+//   { name: 'Nate', age: 67 },
+//   { name: 'Jeniffer', age: 65 }
+// ];
 
-const ageDifferenceResult = findAgeDifference(peopleArray);
-console.log(ageDifferenceResult);
+// const result = fn49(peopleArray);
+// console.log(result, 'fn49');
 
-// 50 masala
-
-
-const singleNumber = function (nums: (number | boolean)[]): number[] {
-  return nums.filter(num => typeof num === 'number' && nums.indexOf(num) === nums.lastIndexOf(num));
-};
-
-// Test
-const result7 = singleNumber([4, 1, 2, 1, 2, 9, true]);
-console.log(result7);
 
 
 
